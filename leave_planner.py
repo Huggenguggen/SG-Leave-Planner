@@ -378,7 +378,7 @@ def main(argv: List[str] = None) -> int:
         used = used_by_year.get(y, 0)
         leave_left_by_year[y] = max(entitlement - used, 0)  # no negative
 
-
+    burned_leave = max(burned_leave - used_by_year.get(date.today().year, 0), 0)
 
     current_year = date.today().year
     next_year = current_year + 1
